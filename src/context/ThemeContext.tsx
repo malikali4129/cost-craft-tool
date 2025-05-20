@@ -28,6 +28,19 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     
     // Apply transition class for smooth theme changes
     root.style.transition = 'background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease';
+    
+    // Add a small animation to text selections when theme changes
+    const styleElement = document.createElement('style');
+    styleElement.textContent = `
+      ::selection {
+        transition: all 0.3s ease;
+      }
+    `;
+    document.head.appendChild(styleElement);
+    
+    return () => {
+      document.head.removeChild(styleElement);
+    };
   }, [theme]);
 
   const toggleTheme = () => {
