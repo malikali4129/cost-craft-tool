@@ -18,7 +18,7 @@ export function ThemeToggle() {
         {theme === "light" ? (
           <Sun className="h-5 w-5 text-orange-500 transition-transform duration-300 hover:rotate-45" />
         ) : (
-          <Moon className="h-5 w-5 text-blue-400 transition-transform duration-300 hover:-rotate-45" />
+          <Moon className="h-5 w-5 text-blue-400 transition-transform duration-300 hover:-rotate-45 neon-glow" />
         )}
       </div>
       <span className="sr-only">Toggle theme</span>

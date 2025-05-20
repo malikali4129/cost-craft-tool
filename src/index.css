@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,45 +96,66 @@
 
 @layer utilities {
   .neon-glow {
-    filter: drop-shadow(0 0 5px currentColor);
+    filter: drop-shadow(0 0 5px currentColor) drop-shadow(0 0 10px currentColor);
   }
   
   .neon-text {
-    text-shadow: 0 0 5px currentColor;
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
   }
   
   .neon-box {
-    box-shadow: 0 0 10px currentColor;
+    box-shadow: 0 0 10px currentColor, 0 0 20px rgba(currentColor, 0.5);
   }
   
   .neon-pulse {
-    animation: neon-pulse 1.5s ease-in-out infinite alternate;
+    animation: neon-pulse 2s ease-in-out infinite alternate;
   }
   
   @keyframes neon-pulse {
     from {
       opacity: 0.8;
-      text-shadow: 0 0 4px currentColor;
-      box-shadow: 0 0 4px currentColor;
+      text-shadow: 0 0 4px currentColor, 0 0 8px currentColor;
+      box-shadow: 0 0 4px currentColor, 0 0 8px currentColor;
     }
     to {
       opacity: 1;
-      text-shadow: 0 0 8px currentColor, 0 0 12px currentColor;
-      box-shadow: 0 0 8px currentColor, 0 0 12px currentColor;
+      text-shadow: 0 0 8px currentColor, 0 0 12px currentColor, 0 0 16px currentColor;
+      box-shadow: 0 0 8px currentColor, 0 0 12px currentColor, 0 0 16px currentColor;
     }
   }
   
   .hover-scale {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
   }
   
   .hover-scale:hover {
     transform: scale(1.05);
+    filter: brightness(1.1);
   }
   
   .dark .card-highlight:hover {
     background-color: rgba(255, 255, 255, 0.05);
-    border-color: rgba(139, 92, 246, 0.3);
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1);
+  }
+  
+  .dark .cyan-glow {
+    box-shadow: 0 0 15px rgba(13, 245, 227, 0.3), 0 0 30px rgba(13, 245, 227, 0.1);
+    border-color: rgba(13, 245, 227, 0.5);
+  }
+  
+  .dark .purple-glow {
+    box-shadow: 0 0 15px rgba(162, 102, 247, 0.3), 0 0 30px rgba(162, 102, 247, 0.1);
+    border-color: rgba(162, 102, 247, 0.5);
+  }
+  
+  .dark .pink-glow {
+    box-shadow: 0 0 15px rgba(245, 110, 179, 0.3), 0 0 30px rgba(245, 110, 179, 0.1);
+    border-color: rgba(245, 110, 179, 0.5);
+  }
+  
+  .dark .blue-glow {
+    box-shadow: 0 0 15px rgba(94, 230, 255, 0.3), 0 0 30px rgba(94, 230, 255, 0.1);
+    border-color: rgba(94, 230, 255, 0.5);
   }
 }
