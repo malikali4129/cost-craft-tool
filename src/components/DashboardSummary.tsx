@@ -1,7 +1,6 @@
-
 import { useExpense } from "@/context/ExpenseContext";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Wallet, Piggy_Bank, BadgeDollarSign } from "lucide-react";
+import { Wallet, PiggyBank, BadgeDollarSign } from "lucide-react";
 
 const DashboardSummary = () => {
   const { expenses, getTotalExpenses } = useExpense();
@@ -83,7 +82,7 @@ const DashboardSummary = () => {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between pb-2">
           <CardTitle className="text-sm font-medium">Last Month</CardTitle>
-          <Piggy_Bank className="h-4 w-4 text-muted-foreground" />
+          <PiggyBank className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">${lastMonthTotal.toFixed(2)}</div>
