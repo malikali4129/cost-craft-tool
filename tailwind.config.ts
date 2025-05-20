@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Neon colors
+				neon: {
+					cyan: '#0DF5E3',
+					purple: '#A266F7',
+					pink: '#F56EB3',
+					blue: '#5EE6FF',
+					yellow: '#F8FF8E',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +93,30 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				pulse: {
+					'0%, 100%': { opacity: 1 },
+					'50%': { opacity: 0.5 },
+				},
+				glow: {
+					'0%, 100%': { 
+						filter: 'drop-shadow(0 0 5px currentColor)' 
+					},
+					'50%': { 
+						filter: 'drop-shadow(0 0 15px currentColor)' 
+					},
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'glow': 'glow 3s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
 			}
 		}
 	},
