@@ -95,14 +95,15 @@
   }
   
   ::selection {
-    @apply bg-neon-cyan/30 text-white;
-    text-shadow: 0 0 8px rgba(13, 245, 227, 0.8), 0 0 12px rgba(13, 245, 227, 0.6);
+    background: transparent !important;
+    color: #ffffff !important;
+    text-shadow: 0 0 8px rgba(13, 245, 227, 0.8), 0 0 12px rgba(13, 245, 227, 0.6), 0 0 20px rgba(13, 245, 227, 0.4);
   }
 
   .dark ::selection {
-    @apply bg-neon-purple/30 text-white;
+    background: transparent !important;
+    color: #ffffff !important;
     text-shadow: 0 0 8px rgba(162, 102, 247, 0.8), 0 0 15px rgba(162, 102, 247, 0.6), 0 0 20px rgba(162, 102, 247, 0.4);
-    box-shadow: 0 0 10px rgba(162, 102, 247, 0.4);
   }
 }
 
